@@ -3,47 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Portfolio - Romaric</title>
+    <style>
+        /* STYLES GÉNÉRAUX */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        header h1 {
+            font-size: 2.8em;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.3em;
+            opacity: 0.9;
+        }
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        /* CARTES (sections) */
+        .card {
+            background-color: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        .card img {
+            max-width: 150px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 20px;
+            border: 4px solid #003366;
+        }
+        h2 {
+            color: #003366;
+            border-bottom: 3px solid #003366;
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 25px;
+        }
+        ul li {
+            margin: 10px 0;
+            font-size: 1.05em;
+        }
+        ul li strong {
+            color: #003366;
+        }
+        /* FORMULAIRE */
+        .form-group {
+            margin-bottom: 18px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #003366;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1em;
+            font-family: inherit;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #003366;
+            outline: none;
+        }
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        .btn {
+            background-color: #003366;
+            color: white;
+            border: none;
+            padding: 14px 35px;
+            font-size: 1.1em;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .btn:hover {
+            background-color: #002244;
+        }
+        /* PIED DE PAGE */
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #888;
+            font-size: 0.95em;
+            background-color: white;
+            margin-top: 20px;
+        }
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+            header h1 { font-size: 2em; }
+            .card { padding: 20px; }
+        }
+    </style>
 </head>
 <body>
-<header>
-    <img src="photo.JPEG.jpeg" alt="Photo de Romaric" width="180">
-    <h1>Romaric Djimoko</h1>
-    <p>Étudiant en Génie Civil | Candidat à SUPINFO</p>
-</header>
 
-<section>
-    <h2>À propos de moi</h2>
-    <p>
-        Je suis titulaire d'une Licence en Génie Civil et je souhaite intégrer
-        SUPINFO afin de développer mes compétences en informatique.
-    </p>
-</section>
+    <!-- ===== PAGE D'ACCUEIL ===== -->
+    <header>
+        <h1>👋 Bonjour, je suis Romaric</h1>
+        <p>Étudiant en Bâtiment · Passionné de construction et de développement web</p>
+    </header>
 
-<section>
-    <h2>Compétences</h2>
-    <ul>
-        <li>power point</li>
-        <li>logiciel de rendu lumion</li>
-        <li>AutoCAD</li>
-        <li>ArchiCAD</li>
-        <li>Microsoft Word</li>
-        <li>Microsoft Excel</li>
-    </ul>
-</section>
+    <div class="container">
 
-<section>
-    <h2>Projets</h2>
-    <p>• Conception d'un bâtiment R+2.</p>
-    <p>• Projet de calcul de structure.</p>
-    <p>• Création de mon premier site web.</p>
-</section>
+        <!-- ===== SECTION PRÉSENTATION ===== -->
+        <div class="card">
+            <img src="photoJPG.jpg" alt="Ma photo">
+            <h2>À propos de moi</h2>
+            <p>Je m'appelle <strong>Romaric</strong>, étudiant dans le domaine du <strong>bâtiment et des travaux publics</strong>. En parallèle, j'apprends le développement web pour créer des outils et des sites utiles à mon métier. Curieux et autodidacte, j'aime allier technique et créativité.</p>
+        </div>
 
-<section>
-    <h2>Contact</h2>
-    <p>Email : teadoumdjimy@gmail.com</p>
-</section>
+        <!-- ===== SECTION COMPÉTENCES ===== -->
+        <div class="card">
+            <h2>🛠️ Mes compétences</h2>
+            <ul>
+                <li><strong>Lecture de plans</strong> - Compréhension des plans architecturaux et techniques</li>
+                <li><strong>Calcul de structure</strong> - Résistance des matériaux et dimensionnement</li>
+                <li><strong>Conduite de projet</strong> - Organisation et suivi de chantier</li>
+                <li><strong>HTML & CSS</strong> - Création de pages web modernes</li>
+                <li><strong>Git & GitHub</strong> - Gestion de versions et collaboration</li>
+            </ul>
+        </div>
+
+        <!-- ===== SECTION PROJETS ===== -->
+        <div class="card">
+            <h2>📐 Mes projets</h2>
+            <ul>
+                <li><strong>Conception d'un bâtiment R+2</strong> - Étude architecturale et structurelle d'un immeuble de 3 niveaux.</li>
+                <li><strong>Projet de calcul de structure</strong> - Dimensionnement des poutres et poteaux en béton armé.</li>
+                <li><strong>Mon premier site web</strong> - Ce portfolio, codé de A à Z en HTML et CSS.</li>
+            </ul>
+        </div>
+
+        <!-- ===== SECTION FORMATIONS & EXPÉRIENCES ===== -->
+        <div class="card">
+            <h2>📚 Formations et expériences</h2>
+            <ul>
+                <li><strong>2025 - 2026</strong> - B.Eng. en Génie Civil / Bâtiment (en cours)</li>
+                <li><strong>2024 - 2025</strong> - Baccalauréat Scientifique</li>
+                <li><strong>2025</strong> - Stage d'observation en entreprise de construction (1 mois)</li>
+                <li><strong>2026</strong> - Formation autodidacte en développement web (HTML, CSS, Git)</li>
+            </ul>
+        </div>
+
+        <!-- ===== SECTION CONTACT (FORMULAIRE) ===== -->
+        <div class="card">
+            <h2>📧 Me contacter</h2>
+            <p>Vous avez une question, un projet ou une opportunité ? N'hésitez pas à m'écrire !</p>
+            <br>
+            <form action="mailto:teadoumdjimy@email.com" method="post" enctype="text/plain">
+                <div class="form-group">
+                    <label for="nom">Votre nom</label>
+                    <input type="text" id="nom" name="nom" placeholder="Entrez votre nom" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Votre email</label>
+                    <input type="email" id="email" name="email" placeholder="Entrez votre email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Votre message</label>
+                    <textarea id="message" name="message" placeholder="Écrivez votre message ici..." required></textarea>
+                </div>
+                <button type="submit" class="btn">Envoyer le message</button>
+            </form>
+            <br>
+            <p>📩 Ou écrivez-moi directement à : <strong>teadoumdjimy@email.com</strong></p>
+        </div>
+
+    </div>
+
+    <!-- ===== PIED DE PAGE ===== -->
+    <footer>
+        <p>© 2026 Romaric - Portfolio réalisé dans le cadre du mini-projet d'admission B.Eng.</p>
+    </footer>
 
 </body>
 </html>
